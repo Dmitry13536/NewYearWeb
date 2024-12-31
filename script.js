@@ -32,25 +32,22 @@
 //         const formattedSeconds = String(secs).padStart(2, '0');
 //         return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
 //     }
-    
 //     updateTimer(); // Обновляем таймер сразу, чтобы не было задержки в 1 секунду
 //     const intervalId = setInterval(updateTimer, 1000); // Обновляем каждую секунду
 // }
-
-
 // startTimer('timer', 0, 0, 10);
+
 
 function startCountdownTimer(elementId) {
     const timerElement = document.getElementById(elementId);
-    const targetDate = new Date('2025-01-01T00:00:00'); // Задаем целевую дату
+    const targetDate = new Date('2025-01-01T00:00:00'); 
   
     function updateTimer() {
       const now = new Date();
       const diff = targetDate.getTime() - now.getTime();
   
       if (diff <= 0) {
-        clearInterval(intervalId);
-        timerElement.textContent = "Время пришло!";
+        window.location.href = "newYear.html";
         return;
       }
   
