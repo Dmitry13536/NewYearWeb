@@ -1,0 +1,105 @@
+/* Убираем комментарии для экономии места */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    min-height: 100vh; /* Задает минимальную высоту body на весь viewport */
+    display: flex;     /* Используем flex для позиционирования элементов header, banner и footer */
+    flex-direction: column; /* Располагаем элементы в колонку */
+}
+
+p {
+    color: #A9D9F5;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    background-color: #D3E2F4;
+    background-image: url(imgs/Vector\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    filter:  drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
+    height: 10%;
+    /* Удален неиспользуемый код flexbox */
+}
+
+header p {
+    font-size: 40px;
+    padding: 3% 0 3% 4%;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.banner {
+    flex: 1; /* Заставляет баннер растягиваться */
+    background-image: url(imgs/Rectangle3-mini.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Центрируем контент по вертикали и горизонтали */
+}
+
+.banner{
+    text-align: center;
+}
+
+.first {
+    font-size: 24px;}
+
+.second {
+    font-size: 110px;
+    margin-bottom: 40%; /* Уменьшил отступ */
+}
+
+footer {
+    background: #D3E2F4;
+    height: 10vh;
+    background-image: url(imgs/Vector\ 2.svg);
+    filter:  drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
+    /* bottom: 0; - bottom:0 не требуется при использовании flexbox на body */
+}
+
+
+@media(min-width: 1024px){
+    header{
+        /* height: 10vh; */
+        background-image: url(imgs/Vector\ 4.svg);
+        background-size: cover;
+        background-position: 0 100%;
+    }
+
+    header p{
+        padding: 1% 0 1% 2%;
+    }
+
+    footer{
+
+        background-size: contain;
+
+    }
+
+    .banner{
+        max-height: 80vh;
+        /* padding-top: 20%; */
+        /* align-items: center; */
+        flex-direction: row;
+        justify-content: flex-start;
+        background-image: url(imgs/Rectangle\ 3.png);
+    }
+
+    .banner div{
+        margin-left: 10%;
+    }
+
+    .first{
+        font-size: 30px;
+    }
+    .second{
+        font-size: 128px;
+    }
+
+}
