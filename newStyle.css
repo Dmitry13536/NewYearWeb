@@ -1,0 +1,106 @@
+/* Убираем комментарии для экономии места */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    min-height: 100vh; 
+    display: flex;    
+    flex-direction: column; 
+}
+
+p {
+    color: #F7A072;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    background-color: #C84630;
+    background-image: url(imgs/Vector\ 32.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    filter:  drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
+    height: 10%;
+    /* Удален неиспользуемый код flexbox */
+}
+
+header p {
+    font-size: 40px;
+    padding: 3% 0 3% 4%;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.banner {
+    flex: 1; 
+    background-image: url(imgs/Rectangle4-mini.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.banner{
+    text-align: center;
+}
+
+.first {
+    font-size: 24px;}
+
+.second {
+    font-size: 70px;
+    margin-bottom: 40%;
+}
+
+footer {
+    background: #C84630;
+    height: 10vh;
+    background-image: url(imgs/Vector\ 12.svg);
+    background-size: contain;
+    filter:  drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
+    
+}
+
+@media(min-width:600px){
+    .second{
+        font-size: 90px;
+    }
+}
+
+@media(min-width: 1024px){
+    header{
+        background-image: url(imgs/Vector\ 42.svg);
+        background-size: cover;
+        background-position: 0 100%;
+    }
+
+    header p{
+        padding: 1% 0 1% 2%;
+    }
+
+    footer{
+
+        background-size: contain;
+
+    }
+
+    .banner{
+        max-height: 80vh;
+        /* padding-top: 20%; */
+        /* align-items: center; */
+        flex-direction: row;
+        justify-content: center;
+        background-image: url(imgs/Rectangle\ 4.png);
+    }
+    .first{
+        font-size: 30px;
+    }
+    .second{
+        font-size: 128px;
+    }
+
+}
