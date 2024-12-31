@@ -6,9 +6,9 @@
 }
 
 body {
-    min-height: 100vh; /* Задает минимальную высоту body на весь viewport */
-    display: flex;     /* Используем flex для позиционирования элементов header, banner и footer */
-    flex-direction: column; /* Располагаем элементы в колонку */
+    min-height: 100vh; 
+    display: flex;    
+    flex-direction: column; 
 }
 
 p {
@@ -34,13 +34,13 @@ header p {
 }
 
 .banner {
-    flex: 1; /* Заставляет баннер растягиваться */
+    flex: 1; 
     background-image: url(imgs/Rectangle3-mini.png);
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Центрируем контент по вертикали и горизонтали */
+    justify-content: center; 
 }
 
 .banner{
@@ -51,8 +51,8 @@ header p {
     font-size: 24px;}
 
 .second {
-    font-size: 110px;
-    margin-bottom: 40%; /* Уменьшил отступ */
+    font-size: 70px;
+    margin-bottom: 40%;
 }
 
 footer {
@@ -60,13 +60,17 @@ footer {
     height: 10vh;
     background-image: url(imgs/Vector\ 2.svg);
     filter:  drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3));
-    /* bottom: 0; - bottom:0 не требуется при использовании flexbox на body */
+    
 }
 
+@media(min-width:600px){
+    .second{
+        font-size: 90px;
+    }
+}
 
 @media(min-width: 1024px){
     header{
-        /* height: 10vh; */
         background-image: url(imgs/Vector\ 4.svg);
         background-size: cover;
         background-position: 0 100%;
