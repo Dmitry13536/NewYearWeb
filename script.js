@@ -40,7 +40,7 @@
 
 function startCountdownTimer(elementId) {
     const timerElement = document.getElementById(elementId);
-    const targetDate = new Date('2025-01-01T00:00:00'); 
+    const targetDate = new Date('2026-01-01T00:00:00'); 
   
     function updateTimer() {
       const now = new Date();
@@ -60,7 +60,7 @@ function startCountdownTimer(elementId) {
     }
   
     function formatTime(days, hours, minutes, seconds) {
-        const formattedDays = String(days).padStart(2, '0');
+        const formattedDays = String(days).padStart(3, '0');
         const formattedHours = String(hours).padStart(2, '0');
         const formattedMinutes = String(minutes).padStart(2, '0');
         const formattedSeconds = String(seconds).padStart(2, '0');
